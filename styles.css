@@ -49,9 +49,17 @@ input, textarea, button, select{
     font: inherit;
 }
 
+@media (min-width: 768px){ 
+    .contenedor{
+        max-width: 60rem;
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+
 /* Estilos propios BEM */
 .header{
-    background: linear-gradient(var(--VeryLightRed2), var(--LightRed2));
+    background: linear-gradient(90deg, var(--VeryLightRed2), var(--LightRed2));
     height: 600px;
     border-bottom-left-radius: 90px;
     position: relative;
@@ -67,6 +75,12 @@ input, textarea, button, select{
     width: 100%;
     border-bottom-left-radius: inherit
 }
+@media (min-width: 768px){ 
+    .header__pattern{
+        background-image: url(images/bg-pattern-intro-desktop.svg);
+        background-position: 30%;
+    }
+}
 .header__contenedor__nav{
     padding: 1rem;
     position: absolute;
@@ -80,6 +94,37 @@ input, textarea, button, select{
     align-items: center;
     justify-content: space-between;
 }
+@media (min-width: 768px){ 
+    .nav__mobile{
+        display: none;
+    }
+}
+.nav__desktop{
+    display: none;
+}
+@media (min-width: 768px){ 
+    .nav__desktop{
+        display: flex;
+        align-items: end;
+        margin-top: 2rem;
+        position: relative;
+    }
+    .nav__desktop--ul{
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .nav__desktop--li{
+        list-style: none;
+        font-weight: 700;
+        color: var(--White);
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        cursor: pointer;
+    }
+}
+
 .header__contenido{
     padding: 1rem;
     position: absolute;
@@ -88,11 +133,21 @@ input, textarea, button, select{
     left: 0;
     right: 0;
 }
+@media (min-width: 768px){ 
+    .header__contenido{
+        top: 40%;
+    }
+}
 .header__contenido__title{
     color: var(--White);
     text-align: center;
     font-weight: 700;
     font-size: 32px;
+}
+@media (min-width: 768px){ 
+    .header__contenido__title{
+        font-size: 42px;
+    }
 }
 .header__contenido__text{
     color: var(--GrayishBlue);
@@ -107,6 +162,11 @@ input, textarea, button, select{
     width: 300px;
     top: 65%;
     left: calc(50% - 150px);
+}
+@media (min-width: 768px){ 
+    .header__botones{
+        top: 59%;
+    }
 }
 .menu__mobile{
     position: absolute;
@@ -145,22 +205,36 @@ input, textarea, button, select{
 .btn__blor{
     border: none;
     border-radius: 25px;
-    padding: 10px 15px;
+    padding: 7px 15px;
     color: var(--LightRed);
     font-weight: 700;
     background-color: var(--White);
+    transition: all .15s ease-in;
+}
+.btn__blor:hover{
+    background-color: var(--VerylightRed);
+    color: var(--White);
 }
 .btn__blor--transparent{
     background-color: transparent;
     color: var(--White);
     border: 1px solid var(--White);
 }
+.btn__blor--transparent:hover{
+    background-color: var(--White);
+    color: var(--VerylightRed);
+}
 .btn__blor--signup{
-    background: linear-gradient(var(--VeryLightRed2), var(--LightRed2));
+    background: linear-gradient(90deg, var(--VeryLightRed2), var(--LightRed2));
     color: var(--White);
     border: 1px solid var(--White);
     width: 130px;
     margin: 0 auto;
+    transition: all .20s ease-in;
+}
+.btn__blor--login{
+    background-color: transparent;
+    color: var(--White);
 }
 /* Main section */
 .main{
@@ -172,6 +246,11 @@ input, textarea, button, select{
     text-align: center;
     font-size: 24px;
 }
+@media (min-width: 768px){ 
+    .main__heading{
+        text-align: left;
+    }
+}
 .main__heading--white{
     color: var(--White);
     font-size: 28px;
@@ -182,8 +261,49 @@ input, textarea, button, select{
     padding: 0 2rem;
     margin: 10px 0;
 }
+@media (min-width: 768px){ 
+    .main__text{
+        text-align: left;
+        padding: 0;
+    }
+}
 .main__text--white{
     color: var(--GrayishBlue);
+    width: 100%;
+}
+@media (min-width: 768px){ 
+    .main__text--white{
+        color: var(--GrayishBlue);
+        width: 70%;
+    }
+}
+.main__grid{
+    display: grid;
+}
+@media (min-width: 768px){ 
+    .main__grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 150px);
+        column-gap: 5rem;
+        row-gap: 5rem;
+    }
+    .main__grid--area1{
+        /* grid-area: 1 / 2 / 1 / 2; */
+        grid-area: 1 / 2;
+    }
+    .main__grid--area2{
+        grid-area: 1 / 1;
+    }
+    .main__grid--area3{
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+    }
+    .main__grid--area4{
+        grid-column: 2 / 3;
+    }
+    .main__grid--area5{
+        grid-column: 2 / 3;
+    }
 }
 
 .section__state{
@@ -194,6 +314,11 @@ input, textarea, button, select{
     z-index: 1;
     border-bottom-left-radius: 90px;
     border-top-right-radius: 90px;
+}
+@media (min-width: 768px){ 
+    .section__state{
+        height: 300px;
+    }
 }
 .section__state__image{
     background-image: url(images/illustration-phones.svg);
@@ -207,13 +332,20 @@ input, textarea, button, select{
     z-index: 3;
     top: -100px;
 }
+@media (min-width: 768px){ 
+    .section__state__image{
+        top: -70px;
+        left: -300px;
+        height: 400px;
+    }
+}
 .section__state__pattern{
     background-image: url(images/bg-pattern-circles.svg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
     height: inherit;
-    width: 100%;
+    /* width: 335px; */
     top: -10px;
     position: absolute;
     z-index: 2;
@@ -223,6 +355,14 @@ input, textarea, button, select{
     position: absolute;
     z-index: 3;
     top: 40%;
+}
+@media (min-width: 768px){ 
+    .section__content{
+        position: absolute;
+        z-index: 3;
+        top: 40%;
+        left: 50%;
+    }
 }
 
 /* Footer */
@@ -235,10 +375,26 @@ input, textarea, button, select{
     align-items: center;
     padding: 3rem 0;
 }
+@media (min-width: 768px){ 
+    .footer{
+        background-color: var(--VeryDarkBlackBlue);
+        border-top-right-radius: 90px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        padding: 3rem 0;
+    }
+}
 .footer__content p{
     color: var(--White);
     font-weight: 700;
     text-align: center;
+}
+@media (min-width: 768px){ 
+    .footer__content p{
+        text-align: left;
+    }
 }
 .footer__content ul{
     padding: 0;
@@ -247,4 +403,16 @@ input, textarea, button, select{
     list-style: none;
     color: var(--GrayishBlue);
     text-align: center;
+    border-bottom: 2px solid transparent;
+}
+@media (min-width: 768px){ 
+    .footer__content ul li{
+        text-align: left;
+        transition: all .15s ease-in;
+    }
+    .footer__content ul li:hover{
+        cursor: pointer;
+        border-bottom: 2px solid var(--White);
+        width: auto;
+    }
 }

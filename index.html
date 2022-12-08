@@ -20,9 +20,21 @@
                 <img id="icon-ham" src="images/icon-hamburger.svg" alt="icon menu ham">
                 <img id="icon-close" class="d-none" src="images/icon-close.svg" alt="icon close menu">
             </div>
+            <div class="nav__desktop contenedor"> 
+                <img src="images/logo.svg" alt="image logo blor">
+                <ul class="nav__desktop--ul">
+                    <li class="nav__desktop--li">Product <img class="ms-1" src="images/icon-arrow-light.svg" alt="icon-arrow"></li>
+                    <li class="nav__desktop--li">Company <img class="ms-1" src="images/icon-arrow-light.svg" alt="icon-arrow"></li>
+                    <li class="nav__desktop--li">Connect <img class="ms-1" src="images/icon-arrow-light.svg" alt="icon-arrow"></li>
+                </ul>
+                <div class="position-absolute" style="right: 0;">
+                    <button class="btn__blor btn__blor--login">Login</button>
+                    <button class="btn__blor">Sign Up</button>
+                </div>
+            </div>
         </nav>
         <div class="header__contenido">
-            <h1 class="header__contenido__title">A modern<span class="d-block d-lg-inline">publishing platform</span></h1>
+            <h1 class="header__contenido__title">A modern <span class="d-block d-lg-inline">publishing platform</span></h1>
             <p class="header__contenido__text">Grow your audience and build your <span class="d-block d-lg-inline">online brand</span></p>
         </div>
         <div class="header__botones">
@@ -46,30 +58,33 @@
     </header>
 
     <main class="main">
-        <div class="container">
-            <h2 class="main__heading">Designed for the future</h2>
-            <img class="my-4" src="images/illustration-editor-mobile.svg" alt="image editor mobile">
-        </div>
-        <div class="container">
-            <h2 class="main__heading mt-5">Introducing an <span class="d-block d-lg-inline">extensible editor</span></h2>
-            <p class="main__text">
-                Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-                change the looks of a blog.
-            </p>
-            <h2 class="main__heading mt-5">Robust content<span class="d-block d-lg-inline">management</span></h2>
-            <p class="main__text">
-                Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-                by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-            </p>
+        <h2 class="main__heading text-center">Designed for the future</h2>
+        <div class="main__grid contenedor">
+            <div class="main__grid--area1">
+                <img class="my-4 d-block d-lg-none" src="images/illustration-editor-mobile.svg" alt="image editor mobile">
+                <img class="my-4 d-none d-lg-block" src="images/illustration-editor-desktop.svg" alt="image editor desktop">
+            </div>
+            <div class="main__grid--area2">
+                <h2 class="main__heading mt-5">Introducing an <span class="d-block d-lg-inline">extensible editor</span></h2>
+                <p class="main__text">
+                    Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+                    The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+                    videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+                    change the looks of a blog.
+                </p>
+                <h2 class="main__heading mt-5">Robust content <span class="d-block d-lg-inline">management</span></h2>
+                <p class="main__text">
+                    Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+                    by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                </p>
+            </div>
         </div>
 
         <div class="section__state">
             <div class="section__state__image"></div>
             <div class="section__state__pattern"></div>
             <div class="section__content">
-                <h2 class="main__heading main__heading--white">State of the Art <span class="d-block d-ld-inline">Infrastructure</span></h2>
+                <h2 class="main__heading main__heading--white">State of the Art <span class="d-block d-lg-inline">Infrastructure</span></h2>
                 <p class="main__text main__text--white">
                     With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
                     This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
@@ -77,9 +92,9 @@
             </div>
         </div>
 
-        <div class="container my-5">
-            <img src="images/illustration-laptop-mobile.svg" alt="laptop image">
-            <div>
+        <div class="container main__grid my-5">
+            <img class="main__grid--area3" src="images/illustration-laptop-mobile.svg" alt="laptop image">
+            <div class="main__grid--area4">
                 <h2 class="main__heading mt-4">Free, open, simple</h2>
                 <p class="main__text">
                     Blogr is a free and open source application backed by a large community of helpful developers. It supports 
@@ -87,7 +102,7 @@
                     and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
                 </p>
             </div>
-            <div>
+            <div class="main__grid--area5">
                 <h2 class="main__heading mt-4">Powerful tooling</h2>
                 <p class="main__text">
                     Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
@@ -98,7 +113,7 @@
     </main>
 
     <footer class="footer">
-        <img class="my-5" src="images/logo.svg" alt="">
+        <img class="my-5 my-md-0" src="images/logo.svg" alt="">
         <div class="footer__content">
             <p>Product</p>
             <ul>
